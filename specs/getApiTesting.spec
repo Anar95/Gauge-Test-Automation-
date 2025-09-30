@@ -5,6 +5,7 @@
 tags: get, users, list, gETUsersListTest, jra-5678
 
 * Set base URL to "https://jsonplaceholder.typicode.com"
+
 * Initialize request specification
 
 

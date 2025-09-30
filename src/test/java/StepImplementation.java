@@ -1,9 +1,13 @@
 import com.thoughtworks.gauge.Step;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -95,4 +99,114 @@ public class StepImplementation {
     public void jsonKeyShouldBeNumber(String key) {
         response.then().body(key, instanceOf(Number.class));
     }
+
+
+    @Step("Add endpoint <endpoint>")
+    public void addEndpoint(String endpoint) {
+        requestSpec.basePath(endpoint);
+        System.out.println("Add endpoint " + endpoint);
+
+    }
+
+    @Step("Add as a header <key> = <value>")
+    public void addHeader(String key, String value) {
+        requestSpec.header(key, value);
+        System.out.println("Add header " + key + " = " + value);
+
+    }
+
+    @Step("Add body as file from resource <fileName>")
+    public void addBodyFromFile(String fileName) throws IOException {
+        String fullPath = "src/test/resources/body/" + fileName;
+        //src/test/resources/body/ +  created-user.json
+        System.out.println("Oxunan File " + fullPath);
+
+        String body = new String(Files.readAllBytes(Paths.get(fullPath)));
+        System.out.println("Body mezmunu " + body);
+
+        requestSpec.body(body).contentType(ContentType.JSON);
+    }
+
+    @Step("Post request and display respons")
+    public void sendPostRequest() {
+
+        response = requestSpec.when().post()
+                .then()
+                .log()
+                .all()
+                .extract().response();
+
+    }
+
+    @Step("Add body as text <bodyText>")
+    public void addBodyAsText(String bodyText) {
+        requestSpec.body(bodyText).contentType(ContentType.JSON);
+        System.out.println("Add body as " + bodyText);
+
+    }
+
+    @Step("Save value of <jsonPath> as <variableName>")
+    public void saveJsonValue(String jsonPath, String variableName) {
+        String value = response.jsonPath().getString(jsonPath);
+        System.setProperty(variableName, value);
+        System.out.println("Save value of " + variableName + " as " + value);
+
+    }
+
+    @Step("Json cavabinda <key> deyeri <variable> ile ferqlidir")
+    public void jsonKeyNotEqualToVariable(String key, String variable) {
+        String saveValue = System.getProperty(variable);
+        response.then().body(key, not(saveValue));
+
+    }
+
+    @Step("Put request and display respons")
+    public void sendPutRequest() {
+        response = requestSpec.when().put()
+                .then()
+                .log()
+                .all()
+                .extract().response();
+
+    }
+
+    @Step("Json Cavabinda <key> deyeri string <expectedValue> beraberdir")
+    public void jsonKeyEquals(String key, String expectedValue) {
+        response.then().body(key, equalTo(expectedValue));
+
+    }
+
+    @Step("Json Cavabinda <key> deyeri integer <expectedValue> beraberdir")
+    public void jsonKeyEquals(String key, int expectedValue) {
+        response.then().body(key, equalTo(expectedValue));
+
+    }
+
+    @Step("Json Cavabinda <key> deyeri boolean <expectedValue> beraberdir")
+    public void jsonKeyEquals(String key, boolean expectedValue) {
+        response.then().body(key, equalTo(expectedValue));
+
+    }
+
+    @Step("Patch request and display respons")
+    public void sendPatchRequest() {
+        response = requestSpec.when().patch()
+                .then()
+                .log()
+                .all()
+                .extract().response();
+
+    }
+
+    @Step("Delete request and display respons")
+    public void sendDelete() {
+         response = requestSpec.when().delete()
+                 .then()
+                 .log()
+                 .all()
+                 .extract().response();
+    }
 }
+
+
+
