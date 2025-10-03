@@ -1,0 +1,33 @@
+{
+
+  "Login Button": {
+    "locatorType": "XPATH",
+    "locatorValue": "//a[@class='nav__button-secondary btn-secondary-emphasis btn-md']"
+  },
+
+  "Email Button": {
+    "locatorType": "ID",
+    "locatorValue": "//a[@class='nav__button-secosefgrgwrgndary btn-secondary-emphasis btn-md']"
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

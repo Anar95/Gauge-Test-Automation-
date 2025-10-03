@@ -22,7 +22,6 @@
 * Post request and display respons
 * Status kodu "201" olmalidir
 
-
 ## 3. POST - Dublikate Yaratma Yoxlanışı
 
 * Set base URL to "https://jsonplaceholder.typicode.com"
