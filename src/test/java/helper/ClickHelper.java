@@ -30,6 +30,7 @@ public class ClickHelper {
             String type = LocatorReader.getLocatorType(jsonKey);
             String value = LocatorReader.getLocatorValue(jsonKey);
             By by = getBy(type, value);
+
             WebElement element = wait.until(ExpectedConditions.elementToBeClickable(by));
             element.click();
         } catch (Exception e){

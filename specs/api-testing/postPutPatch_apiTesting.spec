@@ -90,9 +90,9 @@
 
 ## 8. DELETE - Uğurlu Silme
 
-
 * Set base URL to "https://jsonplaceholder.typicode.com"
 * Initialize request specification
 * Add endpoint "/posts/1"
 * Delete request and display respons
 * Status kodu "200" olmalidir
+* Respons cavab muddeti "3000" milliSaniyeden az olmalidir
