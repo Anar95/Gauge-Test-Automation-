@@ -8,6 +8,19 @@
   "Email Button": {
     "locatorType": "ID",
     "locatorValue": "//a[@class='nav__button-secosefgrgwrgndary btn-secondary-emphasis btn-md']"
+  },
+
+
+  "IOS Android Demo Locator": {
+    "IOS": {
+      "locatorType": "ID",
+      "locatorValue": "//a[@class='nav__button-secosefgrgwrgndary btn-secondary-emphasis btn-md']"
+    },
+    "ANDROID": {
+      "locatorType": "ID",
+      "locatorValue": "//a[@class='nav__button-secosefgrgwrgndary btn-secondary-emphasis btn-md']"
+    }
   }
+
 
 }

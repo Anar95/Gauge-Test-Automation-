@@ -24,7 +24,7 @@
 
 ## 3. POST - Dublikate Yaratma Yoxlanışı
 
-* Set base URL to "https://jsonplaceholder.typicode.com"
+* Base URL "https://jsonplaceholder.typicode.com" olaraq təyin et
 * Initialize request specification
 * Add endpoint "/posts"
 * Add as a header "Content-Type" = "application/json"
@@ -40,7 +40,7 @@
 
 ## 4. POST - Authorization ile (Token)
 
-* Set base URL to "https://jsonplaceholder.typicode.com"
+* Base URL "https://jsonplaceholder.typicode.com" olaraq təyin et
 * Initialize request specification
 * Add endpoint "/posts"
 * Add as a header "Content-Type" = "application/json"
@@ -52,7 +52,7 @@
 
 ## 5. PUT - Tam Update (Bütün fielder)
 
-* Set base URL to "https://jsonplaceholder.typicode.com"
+* Base URL "https://jsonplaceholder.typicode.com" olaraq təyin et
 * Initialize request specification
 * Add endpoint "/posts/1"
 * Add as a header "Content-Type" = "application/json"
@@ -67,18 +67,17 @@
 
 ## 6. PUT - Mövcud Olmayan Resurs
 
-* Set base URL to "https://jsonplaceholder.typicode.com"
-* Initialize request specification
-* Add endpoint "/posts/999999999"
-* Add as a header "Content-Type" = "application/json"
-* Add body as file from resource "update-post-user1.json"
-* Put request and display respons
-* Status kodu "500" olmalidir
-
+* Base URL "https://jsonplaceholder.typicode.com" olaraq təyin et
+* Request specification-ı başlat
+* Endpoint "/posts/999999999" əlavə et
+* Body-ə resource-dan "update-post-user1.json" faylını əlavə et
+* PUT request göndər və response göstər
+* Status kodu "200" olmalidir
+* Json Cavabinda "email" deyeri "anar@test.com" olmalıdır
 
 ## 7. PATCH - Yalnız Title Update
 
-* Set base URL to "https://jsonplaceholder.typicode.com"
+* Base URL "https://jsonplaceholder.typicode.com" olaraq təyin et
 * Initialize request specification
 * Add endpoint "/posts/1"
 * Add as a header "Content-Type" = "application/json"

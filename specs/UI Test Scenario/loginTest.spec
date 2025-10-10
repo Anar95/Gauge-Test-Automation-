@@ -12,3 +12,10 @@
 * Element "Login Button" içinde "Daxil Ol" yazısı var
 * "Email Button" görsensin deye maksimum "1" saniye gözle
 * Json filendakı "Email Button" elementine klik et
+* "Email Button" elementine "Hello World" yaz ve Enter düymesine bas
+* "Email Button" elementine "Hello World" yaz ve Tab düymesine bas
+* "Email Button" elementine scroll et
+* "Login Button" elementine scroll et ve klik et
+* Sehifenin yuxarısına scroll et
+* Sehifenin aşağısına scroll et
+* "20" piksel horizontal scroll et
