@@ -7,10 +7,7 @@ Java, Gauge, Selenium və REST Assured ilə hazırlanmış **UI** və **API** te
 - [Layihə haqqında](#-layihə-haqqında)
 - [Texnologiyalar](#️-texnologiyalar)
 - [Layihə strukturu](#-layihə-strukturu)
-- [Quraşdırma](#-quraşdırma)
-- [Testlərin işə salınması](#️-testlərin-işə-salınması)
-- [Test yazılması](#-test-yazılması)
-- [Konfiqurasiya](#️-konfiqurasiya)
+
 
 ##  Layihə haqqında
 
